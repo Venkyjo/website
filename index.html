@@ -120,7 +120,7 @@
     <section class="hero">
         <h2>Welcome to an extraordinary Opportunity</h2>
         <p>Drag this offer with your unique skills.</p>
-        <a href="#" onclick="showPopup()">Apply now</a>
+        <a href="#" onclick="showPopup()" id="applyNowLink">Apply now</a>
     </section>
 
     <section>
@@ -175,12 +175,14 @@
         function submitApplication() {
             var form = document.getElementById('applicationForm');
             var thankYouMessage = document.getElementById('thankYouMessage');
+            var applyNowLink = document.getElementById('applyNowLink');
 
             // Validate the form if needed
             if (form.checkValidity()) {
-                // Hide the form and display the thank you message
+                // Hide the form, display the thank you message, and hide the "Apply now" link
                 form.style.display = 'none';
                 thankYouMessage.style.display = 'block';
+                applyNowLink.style.display = 'none';
             }
         }
     </script>
