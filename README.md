@@ -66,7 +66,7 @@
 
 <body>
     <header>
-        <h1>Your Unique Website</h1>
+        <h1>Create Your Unique Website</h1>
     </header>
 
     <nav>
@@ -84,7 +84,8 @@
 
     <section>
         <h2>About Us</h2>
-        <p>Learn more about our mission, values, and the team behind this one-of-a-kind website.</p>
+        <p>Learn more about our mission, values, and the team behind this one-of-a-kind website.
+        and Learn how to create unique websites using HTML,CSS,JS.</p>
     </section>
 
     <section class="cta">
