@@ -139,6 +139,16 @@
             font-size: 18px;
             color: #3498db;
         }
+
+        .thank-you-message a {
+            color: #3498db;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .thank-you-message a:hover {
+            color: #2980b9;
+        }
     </style>
 </head>
 
@@ -201,7 +211,8 @@
                 </form>
 
                 <div class="thank-you-message" id="thankYouMessage">
-                    Thank you for submitting!
+                    Thank you for submitting! <br>
+                    <a href="#" onclick="goBack()">Go back</a>
                 </div>
             </div>
         </div>
@@ -225,6 +236,10 @@
                 thankYouMessage.style.display = 'block';
                 applyNowLink.style.display = 'none';
             }
+        }
+
+        function goBack() {
+            window.history.back();
         }
     </script>
 </body>
