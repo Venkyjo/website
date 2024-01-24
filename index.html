@@ -62,6 +62,21 @@
             text-align: center;
         }
 
+        .apply-now {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .apply-now:hover {
+            background-color: #2980b9;
+        }
+
         .popup {
             display: none;
             position: fixed;
@@ -120,7 +135,7 @@
     <section class="hero">
         <h2>Welcome to an extraordinary Opportunity</h2>
         <p>Drag this offer with your unique skills.</p>
-        <a href="#" onclick="showPopup()" id="applyNowLink">Apply now</a>
+        <a href="#" class="apply-now" onclick="showPopup()" id="applyNowLink">Apply now</a>
     </section>
 
     <section>
