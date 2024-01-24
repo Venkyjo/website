@@ -61,6 +61,47 @@
             padding: 10px;
             text-align: center;
         }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+        }
+
+        .popup input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .popup button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -79,7 +120,7 @@
     <section class="hero">
         <h2>Welcome to an extraordinary Opportunity</h2>
         <p>Drag this offer with your unique skills.</p>
-        <a href="#" style="background-color: #3498db; color: #fff; padding: 10px 20px; text-decoration: none;">Apply now</a>
+        <a href="#" onclick="showPopup()">Apply now</a>
     </section>
 
     <section>
@@ -99,6 +140,50 @@
     <footer>
         &copy; 2024 Your Unique Website. All rights reserved.
     </footer>
+
+    <div class="popup" id="applyPopup">
+        <div class="popup-content">
+            <h2>Apply for the Opportunity</h2>
+            <form id="applicationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="qualification">Qualification:</label>
+                <input type="text" id="qualification" name="qualification" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="button" onclick="submitApplication()">Submit</button>
+            </form>
+
+            <div class="thank-you-message" id="thankYouMessage">
+                Thank you for submitting!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById('applyPopup');
+            popup.style.display = 'flex';
+        }
+
+        function submitApplication() {
+            var form = document.getElementById('applicationForm');
+            var thankYouMessage = document.getElementById('thankYouMessage');
+
+            // Validate the form if needed
+            if (form.checkValidity()) {
+                // Hide the form and display the thank you message
+                form.style.display = 'none';
+                thankYouMessage.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 
 </html>
