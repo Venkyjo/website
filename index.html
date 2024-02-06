@@ -1,241 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Job</title>
+    <title>50 Buttons Rectangle</title>
     <style>
-        body {
-            font-family: 'Verdana', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-
-        header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #34495e;
-            color: #ecf0f1;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #ecf0f1;
-            text-decoration: none;
-            margin: 0 15px;
-            cursor: pointer;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        .hero {
-            background-image: url('https://example.com/your-hero-image.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 100px;
-        }
-
-        .cta {
-            background-color: #e74c3c;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .apply-now {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
+        .button {
             display: inline-block;
-            margin-top: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .apply-now:hover {
-            background-color: #2980b9;
-        }
-
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .popup-content {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            max-width: 500px;
-            width: 100%;
-        }
-
-        .popup-header {
-            background-color: #3498db;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .popup-body {
-            padding: 20px;
-        }
-
-        .popup input {
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 12px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .popup button {
-            background-color: #3498db;
-            color: #fff;
+            width: 100px;
+            height: 50px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
             border: none;
-            padding: 15px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
         }
-
-        .popup button:hover {
-            background-color: #2980b9;
-        }
-
-        .thank-you-message {
-            display: none;
+        .container {
+            width: 650px;
+            margin: 50px auto;
             text-align: center;
-            margin-top: 20px;
-            font-size: 18px;
-            color: #3498db;
-            cursor: pointer;
-        }
-
-        .thank-you-message:hover {
-            color: #2980b9;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>Hire Yourself</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <section class="hero">
-        <h2>Welcome to an extraordinary Opportunity</h2>
-        <p>Drag this offer with your unique skills.</p>
-        <a href="#" class="apply-now" onclick="showPopup()" id="applyNowLink">Apply now</a>
-    </section>
-
-    <section>
-        <h2>About Us</h2>
-        <p>Learn more about our mission, values, and the team behind this one-of-a-kind website,<br>
-            use this opportunity and create your career with your own hand Learn how to create <br>
-            unique websites using HTML,CSS,JS and become a web-application developer.</p>
-    </section>
-
-    <section class="cta">
-        <h2>Join Us on the Journey</h2>
-        <p>Subscribe to our newsletter for the latest updates and exclusive content.</p>
-        <input type="email" placeholder="Your Email">
-        <button style="background-color: #fff; color: #e74c3c; padding: 10px 20px; border: none;">Subscribe</button>
-    </section>
-
-    <footer>
-        &copy; 2024 Your Unique Website. All rights reserved.
-    </footer>
-
-    <div class="popup" id="applyPopup">
-        <div class="popup-content">
-            <div class="popup-header">
-                <!-- Removed header text -->
-            </div>
-            <div class="popup-body">
-                <form id="applicationForm">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="qualification">Qualification:</label>
-                    <input type="text" id="qualification" name="qualification" required>
-
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-
-                    <button type="button" onclick="submitApplication()">Submit</button>
-                </form>
-
-                <div class="thank-you-message" id="thankYouMessage" onclick="goBack()">
-                    Thank you for submitting!
-                </div>
-            </div>
+    <div class="container">
+        <h1>50 Buttons Rectangle</h1>
+        <div id="button-container">
+            <!-- Buttons will be generated dynamically using JavaScript -->
         </div>
     </div>
 
     <script>
-        function showPopup() {
-            var popup = document.getElementById('applyPopup');
-            popup.style.display = 'flex';
-        }
-
-        function submitApplication() {
-            var form = document.getElementById('applicationForm');
-            var thankYouMessage = document.getElementById('thankYouMessage');
-            var applyNowLink = document.getElementById('applyNowLink');
-
-            // Validate the form if needed
-            if (form.checkValidity()) {
-                // Hide the form, display the thank you message, and hide the "Apply now" link
-                form.style.display = 'none';
-                thankYouMessage.style.display = 'block';
-                applyNowLink.style.display = 'none';
-            }
-        }
-
-        function goBack() {
-            window.history.back();
+        // Generate 50 buttons
+        const buttonContainer = document.getElementById('button-container');
+        for (let i = 1; i <= 50; i++) {
+            const button = document.createElement('button');
+            button.className = 'button';
+            button.textContent = `Button ${i}`;
+            buttonContainer.appendChild(button);
         }
     </script>
 </body>
-
 </html>
