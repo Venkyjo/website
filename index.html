@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HERE WE ARE</title>
+    <title>Clickable Buttons</title>
     <style>
         .button {
             display: inline-block;
@@ -25,19 +25,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>HERE WE ARE</h1>
+        <h1>Clickable Buttons</h1>
         <div id="button-container">
             <!-- Buttons will be generated dynamically using JavaScript -->
         </div>
     </div>
 
     <script>
-        // Generate 50 buttons
+        // Function to handle button clicks
+        function handleClick(event) {
+            alert(`You clicked ${event.target.textContent}`);
+        }
+
+        // Generate 50 clickable buttons
         const buttonContainer = document.getElementById('button-container');
         for (let i = 1; i <= 50; i++) {
             const button = document.createElement('button');
             button.className = 'button';
             button.textContent = `Button ${i}`;
+            button.addEventListener('click', handleClick);
             buttonContainer.appendChild(button);
         }
     </script>
