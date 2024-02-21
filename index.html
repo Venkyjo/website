@@ -3,49 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickable Buttons</title>
+    <title>Student Form</title>
+    
     <style>
-        .button {
-            display: inline-block;
-            width: 100px;
-            height: 50px;
-            margin: 5px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .container {
-            width: 650px;
-            margin: 50px auto;
-            text-align: center;
+
+        h1 {
+            text-align: center; /* Center the text */
+            font-size: 24px; /* Adjust font size */
+            margin-bottom: 20px; /* Add some margin below the h1 */
+        }
+
+        table {
+            width: 18%;
+            border-collapse: collapse; /* To remove the border spacing */
+        }
+
+        th, td {
+            border: 1px solid black; /* Add border to cells */
+            padding: 8px; /* Add padding to cells */
+            text-align: center; /* Align text to the left */
+        }
+
+        button {
+            width: 100%; /* Make the button take full width of the table */
+            padding: 10px; /* Add padding to the button */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Clickable Buttons</h1>
-        <div id="button-container">
-            <!-- Buttons will be generated dynamically using JavaScript -->
-        </div>
-    </div>
-
-    <script>
-        // Function to handle button clicks
-        function handleClick(event) {
-            alert(`You clicked ${event.target.textContent}`);
-        }
-
-        // Generate 50 clickable buttons
-        const buttonContainer = document.getElementById('button-container');
-        for (let i = 1; i <= 50; i++) {
-            const button = document.createElement('button');
-            button.className = 'button';
-            button.textContent = `Button ${i}`;
-            button.addEventListener('click', handleClick);
-            buttonContainer.appendChild(button);
-        }
-    </script>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input id="Np"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input id="AP"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input id="Gp"></td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td><input id="Cp"></td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input id="Ep"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="Saver" onclick="sv()">Save</button></td>
+        </tr>
+    </table>
+    
 </body>
 </html>
